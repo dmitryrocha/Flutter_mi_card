@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -13,10 +14,14 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
             child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             CircleAvatar(
               radius: 50,
               backgroundImage: AssetImage('images/robert.jpg'),
+            ),
+            SizedBox(
+              height: 10.0,
             ),
             Text(
               'Robert Flanbergosky',
@@ -27,8 +32,12 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(
+              height: 10.0,
+            ),
             Text(
-              'Celebridade da Mídia',
+              'Ator, cantor, diretor, produtor, instrumentista, paladino da justiça e bondade',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: 'Source Sans Pro',
                 color: Colors.teal.shade100,
@@ -37,48 +46,45 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Container(
-              color: Colors.white,
-              child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.camera_alt,
-                    color: Colors.teal.shade900,
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                    '@recolencia',
-                    style: TextStyle(
-                      color: Colors.teal.shade900,
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 20.0,
-                    ),
-                  ),
-                ],
+            SizedBox(
+              height: 10.0,
+              width: 250.0,
+              child: Divider(
+                color: Colors.teal.shade100,
               ),
             ),
-            Container(
-              color: Colors.white,
-              child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.phone,
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.camera_alt,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  '@recolencia',
+                  style: TextStyle(
                     color: Colors.teal.shade900,
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
                   ),
-                  SizedBox(
-                    width: 10,
+                ),
+              ),
+            ),
+            Card(
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  '+55 71 999 337 420',
+                  style: TextStyle(
+                    color: Colors.teal.shade900,
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
                   ),
-                  Text(
-                    '+55 71 999 337 420',
-                    style: TextStyle(
-                      color: Colors.teal.shade900,
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 20.0,
-                    ),
-                  ),
-                ],
+                ),
               ),
             ),
           ],
